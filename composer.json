@@ -1,0 +1,17 @@
+{
+    "name": "spoody/ftapi-scripts",
+    "description": "Scripts to interact with the 42 Intra's API",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mehdi Bounya",
+            "email": "mehdi.bounya@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "spoody/ftintra": "v1.0",
+        "vlucas/phpdotenv": "^3.6"
+    }
+}
