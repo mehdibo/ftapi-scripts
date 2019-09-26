@@ -23,6 +23,8 @@ do {
     {
         $user_details = $intraRequest->get('/v2/users/'.$cursus_user->user->id);
         $user_details = json_decode($user_details);
+        if ($user_details->{'staff?'})
+            continue;
         $row = [
             $user_details->login,
             $user_details->first_name,
