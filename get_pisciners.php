@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-require_once __DIR__."/../bootstrap.php";
+require_once __DIR__."/src/bootstrap.php";
 
 // campus_id piscine_month piscine_year
 if ($argc != 4)
