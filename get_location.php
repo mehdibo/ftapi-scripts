@@ -8,7 +8,7 @@ if ($argc != 2)
 
 $login = $argv[1];
 
-$response = $intraRequest->get("/v2/users/$login/locations ");
+$response = $intraRequest->get("/v2/users/$login/locations");
 $response = json_decode($response);
 
 if (empty($response) || $response[0]->end_at !== NULL)
