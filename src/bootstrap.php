@@ -4,7 +4,7 @@ define("ABS", __DIR__);
 
 require_once ABS."/../vendor/autoload.php";
 
-$dotenv = Dotenv\Dotenv::create(ABS);
+$dotenv = Dotenv\Dotenv::create(ABS.'/../');
 $dotenv->load();
 
 $zend = new \Zend\Http\Client();
