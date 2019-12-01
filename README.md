@@ -26,15 +26,15 @@ You can take a look at `script_template` for a quick example.
 To send a **POST** request use:
 
 ```php
-$data = ['key' => 'value'];
-$response = $intraRequest->post('/api/uri', $data);
+$body = ['key' => 'value'];
+$response = $intraRequest->post('/api/uri', $body);
 ```
 
 To send a **GET** request use:
 
 ```php
-$data = ['key' => 'value'];
-$response = $intraRequest->get('/api/uri', $data);
+$parameter = ['key' => 'value'];
+$response = $intraRequest->get('/api/uri', $parameter);
 ```
 
 The `$response` contains the raw text, so if you want to use it you will probably need to decode it:
