@@ -25,7 +25,7 @@ function getLevel(Stdclass $user, int $cursus):float
 	return -1;
 }
 
-fputcsv(STDOUT, ['login', 'first_name', 'last_name', 'email', 'level']);
+fputcsv(STDOUT, ['Login', 'First name', 'Last name', 'E-mail', 'Level']);
 
 foreach ($cursus_ids as $cursus_id) {
 	$data = [
