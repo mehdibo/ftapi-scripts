@@ -15,6 +15,16 @@ $cursus_ids = [
 	21,	// 42cursus
 ];
 
+function getLevel(Stdclass $user, int $cursus):float
+{
+	$cursus_users = $user->cursus_users;
+	foreach ($cursus_users as $cursus_user) {
+		if ($cursus_user->cursus_id === $cursus)
+			return $cursus_user->level;
+	}
+	return -1;
+}
+
 fputcsv(STDOUT, ['login', 'first_name', 'last_name', 'email', 'level']);
 
 foreach ($cursus_ids as $cursus_id) {
@@ -38,6 +48,7 @@ foreach ($cursus_ids as $cursus_id) {
 				$user_details->first_name,
 				$user_details->last_name,
 				$user_details->email,
+				getLevel($user_details, $cursus_id),
 			];
 			fputcsv(STDOUT, $row);
 		}
