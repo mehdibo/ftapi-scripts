@@ -30,7 +30,6 @@ fputcsv(STDOUT, ['Login', 'First name', 'Last name', 'E-mail', 'Level']);
 foreach ($cursus_ids as $cursus_id) {
 	$data = [
 		'filter[campus_id]' => $argv[1],
-		'filter[blackholed]' => 'false',
 		'sort' => 'created_at',
 		'page' => 1,
 	];
